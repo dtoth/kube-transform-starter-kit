@@ -1,0 +1,8 @@
+{
+    "local": {
+        "kube_context": "minikube",
+        "image_path": "kt-image:latest",
+        "build_script_path": "../../resources/scripts/build_local.sh",
+        "data_dir": "/mnt/data/"
+    }
+}
