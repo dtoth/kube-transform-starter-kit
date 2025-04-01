@@ -23,7 +23,7 @@ Try `kube-transform` with a local Kubernetes cluster using Minikube.
 - Set up your local cluster:\
   See [`docs/run_local_k8s.md`](docs/run_local_k8s.md)
 
-- ▶️ Run the Hello World pipeline:\
+- Run the Hello World pipeline:\
   Open and run the notebook at [`examples/hello_world/run.ipynb`](examples/hello_world/run.ipynb)
 
 ### 2. Scale Up to EKS
