@@ -42,8 +42,9 @@ This creates a Kubernetes service account called `kt-pod`, and says that pods ho
 
 Congrats! Your cluster is ready to use.
 
+---
 
-### Helpful Tips
+### Additional Tips
 
 #### List pods/jobs and resource usage 
 ```

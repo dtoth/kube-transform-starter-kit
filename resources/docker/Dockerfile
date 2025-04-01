@@ -1,8 +1,6 @@
 # Base image
 FROM python:3.12-slim
 
-RUN apt-get update && apt-get install -y git
-
 # Set environment variables
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1
@@ -19,7 +17,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 
 # Install Python dependencies
-RUN pip install git+https://github.com/dtoth/kube-transform.git@refactor-kt-package
+
+# Uncomment these lines if you want to install KT from a git branch
+# RUN apt-get update && apt-get install -y git
+# RUN pip install git+https://github.com/dtoth/kube-transform.git@branch-name
+RUN pip install kube-transform
 
 COPY requirements.txt app/requirements.txt
 RUN pip install -r app/requirements.txt

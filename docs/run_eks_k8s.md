@@ -87,8 +87,23 @@ Here, we're saying that the kt-pod service account should assume that role.
 
 Congrats! Your cluster is ready to use.
 
+### Add an entry to your kt-contexts file
 
-### Helpful Tips
+You can run `kubectl config current-context` to get the right kube-context. If you used the provided resources, you just need to swap in your AWS Account ID below.
+
+    "eks": {
+        "kube_context": "arn:aws:eks:us-east-1:ACCOUNT_ID_HERE:cluster/kube-transform-eks-cluster",
+
+        "image_path": "ACCOUNT_ID_HERE.dkr.ecr.us-east-1.amazonaws.com/kube-transform-ecr-repo:latest",
+
+        "build_script_path": "../../resources/scripts/build_eks.sh",
+
+        "data_dir": "s3://kube-transform-data-bucket/"
+    }
+
+
+---
+### Additional Tips
 
 #### Kill all jobs
 ```
